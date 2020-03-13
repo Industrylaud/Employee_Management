@@ -31,15 +31,17 @@ namespace EmployeeManagement
         {
             if (env.IsDevelopment())
             {
+                DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions
+                {
+                    SourceCodeLineCount = 10
+                };
                 app.UseDeveloperExceptionPage();
             }
 
-            FileServerOptions fileServerOptions = new FileServerOptions();
-            fileServerOptions.DefaultFilesOptions.DefaultFileNames.Clear();
-            fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("foo.html");
-            app.UseFileServer(fileServerOptions);
+            app.UseFileServer();
             
             app.Run(async (context) => {
+                throw new Exception("Some errors appears");
                 await context.Response.WriteAsync("Hello world");
             });
         }
