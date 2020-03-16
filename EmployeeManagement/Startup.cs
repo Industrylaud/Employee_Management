@@ -14,16 +14,17 @@ namespace EmployeeManagement
 {
     public class Startup
     {
-        private IConfiguration config;
+        private readonly IConfiguration _config;
 
         public Startup(IConfiguration config)
         {
-            this.config = config;
+            _config = config;
         }
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,9 +36,11 @@ namespace EmployeeManagement
             }
 
             app.UseStaticFiles();
-            
-            app.Run(async (context) => {
-                await context.Response.WriteAsync("hosting environment: "+env.EnvironmentName);
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
             });
         }
     }
