@@ -3,14 +3,10 @@
     <title></title>
 </head>
 <body>
-    <h3>@ViewData["PageTitle"]</h3>
+<h3>@ViewBag.PageTitle</h3>
 
-    @{
-        var employee = ViewData["Employee"] as EmployeeManagement.Models.Employee;
-    }
-
-<div>@employee.Name</div>
-<div>@employee.Email</div>
-<div>@employee.Department</div>
+<div>@ViewBag.employee.Name</div>
+<div>@ViewBag.employee.Email</div>
+<div>@ViewBag.employee.Department</div>
 </body>
 </html>
