@@ -47,7 +47,6 @@ namespace EmployeeManagement
             app.UseMvc(routes => { routes.MapRoute("default", "{controller=Home}/{Action=Index}/{id?}"); });
 
             //app.UseRouting();
-
             //app.UseEndpoints(endpoints =>
             //{
             //    endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
