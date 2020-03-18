@@ -12,7 +12,7 @@
             <div class="card-header">
                 <h3>@employee.Name</h3>
             </div>
-            <img class="card-img-top" src="~/images/donut_render2.jpg" alt="Alternate Text" />
+            <img class="card-img-top" src="~/images/donut_render2.jpg" alt="Alternate Text" asp-append-version="true" />
             <div class="card-footer text-center">
                 <a asp-controller="home" asp-action="Details" asp-route-id="@employee.Id" class="btn btn-primary">View</a>
                 <a href="#" class="btn btn-primary">Edit</a>
