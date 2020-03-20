@@ -30,11 +30,8 @@ namespace EmployeeManagement
             services.AddDbContextPool<AppDbContext>(
                 options => options.UseSqlServer(_config.GetConnectionString("EmployeeDBConnection")));
 
-            services.AddMvc(options =>
-            {
-                options.EnableEndpointRouting = false;
-            });
-            services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
 
         }
 
