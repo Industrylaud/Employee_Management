@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200321155414_PhotoPathColumn.cs" />
+    <Compile Remove="Migrations\20200321155414_PhotoPathColumn.Designer.cs" />
+    <Compile Remove="Migrations\20200321155902_SomeProperty.cs" />
+    <Compile Remove="Migrations\20200321155902_SomeProperty.Designer.cs" />
+    <Compile Remove="Migrations\20200321160302_PhotoPathColumn.cs" />
+    <Compile Remove="Migrations\20200321160302_PhotoPathColumn.Designer.cs" />
+    <Compile Remove="Migrations\20200321160406_AddSomeProperty.cs" />
+    <Compile Remove="Migrations\20200321160406_AddSomeProperty.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Pages\Home\" />
   </ItemGroup>
 
