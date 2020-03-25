@@ -9,7 +9,7 @@ namespace EmployeeManagement.Models
 {
     public class EmployeeCreateViewModel
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
 
         [Required]
         [MaxLength(50, ErrorMessage = "You have too long name, sorry bro")]
