@@ -75,6 +75,7 @@ namespace EmployeeManagement.Controllers
                 employee.Name = model.Name;
                 employee.Email = model.Email;
                 employee.Department = model.Department;
+
                 if(model.Photo != null)
                 {
                     if(model.ExistingPhotoPath != null)
